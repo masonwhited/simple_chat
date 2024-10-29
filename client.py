@@ -25,13 +25,17 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     thread = threading.Thread(target=reader, args=(sock,))
     thread.start()
 
+    name = input("What is your name?: ")
+    name = bytes(f"USER|{name}", "UTF-8")
+    sock.sendall(name)
+
     print("Enter your messages to send (exit to quit):")
     while True:
         message = input()
         if message == "exit":
             break
 
-        message = bytes(message, "UTF-8")
+        message = bytes(f"MSG|{message}", "UTF-8")
         sock.sendall(message)
 
 print("Client closed")
