@@ -34,8 +34,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         message = input()
         if message == "exit":
             break
-
-        message = bytes(f"MSG|{message}", "UTF-8")
+        if message == "users":
+            message = bytes(f"DIR", "UTF-8")
+        else:
+            message = bytes(f"MSG|{message}", "UTF-8")
         sock.sendall(message)
 
 print("Client closed")
