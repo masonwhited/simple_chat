@@ -4,7 +4,7 @@
 
 **Project Description**: A simple chat program that uses host and user servers to communicate with each other
 
-**Project Goals**:
+**Project Goals**: Allow multiple users to link to a single server and send messages to each other via the server.
 
 ## Instructions for Build and Use
 
@@ -24,17 +24,14 @@ Instructions for using the software:
 
 To recreate the development environment, you need the following software and/or libraries with the specified versions:
 
-* First thing here
-*
-*
+* VSCode
 
 ## Useful Websites to Learn More
 
 I found these websites useful in developing this software:
 
-* [Website Title](Link)
-*
-*
+* [Networking Workshop](https://video.byui.edu/media/t/1_4o1tpofn)
+* [ChatGPT](chatgpt.com)
 
 ## Future Work
 
