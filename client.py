@@ -13,6 +13,7 @@ def reader(sock):
             response = str(response, "UTF-8")
             print()
             print(response)
+            print()
         except:
             print("Client Disconnected")
             os._exit(0)

@@ -37,8 +37,6 @@ def client_connect(connection, address):
                 connection.sendall(response)
             elif request[0] == "MSG" and len(request) == 2:
                 broadcast(request[1], connection)
-                response = bytes("MSG_OK", "UTF-8")
-                connection.sendall(response)
             elif request[0] == "DIR":
                 with clients_lock:
                     users = ", ".join(clients.values())
