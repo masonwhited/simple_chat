@@ -1,7 +1,7 @@
 import socket
 import threading
 
-server_ip = "127.0.0.1"
+server_ip = "0.0.0.0"
 server_port = 7000
 server_address = (server_ip, server_port)
 
